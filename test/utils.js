@@ -31,7 +31,7 @@ describe('#utils()', () => {
 
   describe('#getBearerToken()', () => {
     it('should return null for empty methodArn', () => {
-      const token = utils.getToken('');
+      const token = utils.getBearerToken('');
       expect(token).to.equal(null);
     });
 

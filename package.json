@@ -2,8 +2,9 @@
   "name": "api-gateway-policy-gen",
   "version": "0.0.1",
   "description": "A Policy Generator for API Gateway Custom Authorizers",
-  "main": "src/index.js",
+  "main": "index.js",
   "directories": {
+    "lib": "src",
     "test": "test"
   },
   "scripts": {
