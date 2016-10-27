@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - '4.4'
+  - '5.11'
+  - '6.2'
+
+deploy:
+  provider: npm
+  email: accounts@acloud.guru
+  api_key:
+  on:
+    tags: true
+    repo: ACloudGuru/api-gateway-policy-gen
+    branch: master
+notifications:
+  slack:
+    secure:
