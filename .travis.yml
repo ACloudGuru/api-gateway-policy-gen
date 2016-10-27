@@ -1,17 +1,17 @@
 language: node_js
 node_js:
-  - '4.4'
-  - '5.11'
-  - '6.2'
-
+- '4.4'
+- '5.11'
+- '6.2'
 deploy:
   provider: npm
   email: accounts@acloud.guru
   api_key:
+    secure: Wk3gzTEC3FkPbWEr//e+GdYF0VDufXKmeoQx0SP/drdqJidK21uP4t1WLtSTCVEbsHonWVRNfZSil8ndUxxezNM0YSvZ11EF3fHcNYDWRJ3NZewTf892wO6OSxmmeVNEzjFvHc4v86ibxAo7zd1OS2xw3NjVoQ8e7JgfzI4piLsN4If/PtHIvdlLwgR3jmvboRM488TzVRrZVOmWEfAT1U8gBWYQf7uwfGWrandzLMrKSKSb2GmxjywbQo7o7+5EP2ya2t7EHD9EtRgeITpB+I2uq9jW9I4SgZg7yuZSuICRKxefxUqBkUJSWoY5kIJIZZsUSbhkQe3giF8ryw9i+BA6cEdcjya10rv1nkpKNxkBpGSaXc76afMNUb/fdeGey8RVa2BEcZ++kQaU4ZWKiHuB4V79lLLrPr5mXwEoS3Kej3nbBbAu28gf+9Osx9+qSo9ce8UGxLcnkjUxYV20GAYykns6MCnHVCEtwUFD7ouzDWosDq7pUUMSJOnwqD4hQz4Vv+i5Cql9HBxGd1a2BWFHzxXLNz7dzo4SOMn32fkO4wemCA/TOzGieifH36MRR9hnku1YXiysglZGmmfjbClj44ZJcOQA7mlITD3xNcs/w5Tme3xRBbMjm3QTXIWrmonK6YH2PxhpJrd8RXeRUjfC7AEKVpqnDeQS4NvWZKM=
   on:
     tags: true
     repo: ACloudGuru/api-gateway-policy-gen
     branch: master
 notifications:
   slack:
-    secure:
+    secure: q8HMa8B2nOrkXoHjHHaQ6tuUqDY/kHY/1T9jVrQmn9sn6Y/2WCM2CR1x1cqSUXX0aeN3LQBhOw2OAcg29N1ZOa9+M5ysj1YfZnYrqvT6h/dA3RKrDpLojFjhjLywF6/NK/FqsYKWgKETPNeeQrEvbhZnJ6uNExnanD63Ss1FY++x6bR66/StbW8Yh1PVkKSY0jzEFq4N8vkaw6xWA2a4tX2dvGmCNCBZ29Q1OAW/d3eMIKUMdr2q8twK+SXcmUnAo/ILa7Ji3o+3xD/+vjJpasrDXPpHP5vbpjq72/2FTfLKh4zDyOU5lYpnQpCdt5Xl/1ZPXXlO5vUIFLiAKrAfH41Jz922xN3fjpa/yXy4Pl+cm5c67PpR6LdDalrDH7f+Jdwe9wzigfUaupNVNPU9unPdjFnS6xSWuOC2/7OoQgK/98nSz0Ht93CgT6rW5FoX76QjxnCT7m6S6W7N1hQ61048wTbZYoWFl402gcOmB6omEC0keIm+CPVsSV9rROsuk9v6vAV8aAfQwVy/gokaWfCkjcrD9OSwFKLYd5ZY66C8ySPerram6K1a1RDZtXqATG6RX96N4iWmxvVC8f8b/BXkygWqloX+uBEJqEpJV11O4rEqD1qffy3pY8KjMYV/U9JxoaubRzt+WAnLeQwcC5tJz/UnpEVdXpOmJODsj5E=
