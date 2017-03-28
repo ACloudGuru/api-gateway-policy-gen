@@ -9,7 +9,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "snyk test && npm run test:unit",
+    "test": "npm run test:unit",
     "test:unit": "istanbul cover _mocha test -- -R spec --recursive"
   },
   "repository": {
@@ -35,7 +35,6 @@
     "eslint-plugin-promise": "^3.0.0",
     "eslint-plugin-standard": "^2.0.1",
     "istanbul": "^0.4.5",
-    "mocha": "^3.0.2",
-    "snyk": "^1.19.1"
+    "mocha": "^3.0.2"
   }
 }
