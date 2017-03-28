@@ -2,7 +2,7 @@
 
 // API Gateway ARN: 'arn:aws:execute-api:us-east-1:<Account id>:<API id>/<stage>/<verb>/<resource >'
 
-const createResourceArn = function(apiInfo, httpVerb, resource) {
+const createResourceArn = (apiInfo, httpVerb, resource) => {
 
   let cleanedResource = resource;
   if (resource.substring(0, 1) === '/') {
@@ -18,7 +18,7 @@ const createResourceArn = function(apiInfo, httpVerb, resource) {
     cleanedResource;
 }
 
-const createApiGatewayStatement = function(apiInfo, allow, methods) {
+const createApiGatewayStatement = (apiInfo, allow, methods) => {
   const effect = allow ? 'Allow' : 'Deny';
 
   const resources = methods.map((method) => createResourceArn(apiInfo, method.verb, method.resource));
@@ -30,7 +30,7 @@ const createApiGatewayStatement = function(apiInfo, allow, methods) {
   };
 }
 
-const generatePolicy = function(principalId, apiInfo, endpoints) {
+const generatePolicy = (principalId, apiInfo, endpoints, context) => {
   const policy = {
     principalId: principalId,
     policyDocument: {
@@ -42,6 +42,10 @@ const generatePolicy = function(principalId, apiInfo, endpoints) {
   policy.policyDocument.Statement = endpoints.map((endpoint) =>
     createApiGatewayStatement(apiInfo, endpoint.allow, endpoint.methods)
   );
+
+  if (context) {
+    policy.context = context;
+  }
 
   return policy;
 };
