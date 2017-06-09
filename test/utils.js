@@ -19,6 +19,15 @@ describe('#utils()', () => {
     });
   });
 
+  describe('#b64String64toBuffer', function () {
+    const base64String = 'SGVsbG8gV29ybGQ=';
+    const actual = utils.b64String64toBuffer(base64String);
+
+    expect(actual instanceof Buffer).to.equal(true);
+    expect(actual.toString('hex')).to.equal('48656c6c6f20576f726c64');
+    expect(actual.toString('ascii')).to.equal('Hello World');
+  });
+
   describe('#base64decode', function() {
     it('should base64decode', function() {
       const encoded = 'SGVsbG8gV29ybGQ=';
