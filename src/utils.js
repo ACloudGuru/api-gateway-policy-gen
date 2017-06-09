@@ -13,6 +13,11 @@ module.exports.atob = function (str) {
   return new Buffer(str, 'base64').toString('binary');
 };
 
+module.exports.b64toBuffer = function (base64String) {
+  // eslint-disable-next-line node/no-deprecated-api
+  return new Buffer(base64String, 'base64');
+}
+
 module.exports.getAuthInfo = (methodArn) => {
   if (!methodArn) {
     throw new Error('methodArn argument is null');
