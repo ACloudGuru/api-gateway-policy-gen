@@ -19,9 +19,9 @@ describe('#utils()', () => {
     });
   });
 
-  describe('#b64String64toBuffer', function () {
+  describe('#b64toBuffer', function () {
     const base64String = 'SGVsbG8gV29ybGQ=';
-    const actual = utils.b64String64toBuffer(base64String);
+    const actual = utils.b64toBuffer(base64String);
 
     expect(actual instanceof Buffer).to.equal(true);
     expect(actual.toString('hex')).to.equal('48656c6c6f20576f726c64');
