@@ -29,7 +29,7 @@
   "homepage": "https://github.com/ACloudGuru/api-gateway-policy-gen#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "eslint": "^3.6.0",
+    "eslint": "^7.10.0",
     "eslint-config-standard": "^6.2.0",
     "eslint-plugin-node": "^2.1.2",
     "eslint-plugin-promise": "^3.0.0",
